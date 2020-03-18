@@ -1,0 +1,212 @@
+/* ---------------------------
+  Basic Styling
+--------------------------- */
+
+body {
+  font-family: 'Playfair Display', sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background: #2D3945;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.banner {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0 12px;
+  border-bottom: 4px solid #2D3945;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  border-bottom: solid 2px #2D3945;
+  width: 100%;
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+}
+
+h2 {
+  font-size: 20px;
+  color: #2D3945;
+  margin: 0px;
+}
+
+p {
+  color: #A4A9AE;
+  margin: 0px;
+  font-size: 16px;
+}
+
+/* ---------------------------
+  Form Styling
+--------------------------- */
+
+form {
+  margin: 0 12px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+fieldset:first-child {
+  padding-bottom: 24px;
+  border-bottom: solid 2px #2D3945;
+}
+
+legend {
+  font-size: 20px;
+  color: #2D3945;
+  font-weight: bold;
+  padding: 36px 0;
+}
+
+label {
+  color: #55687A;
+}
+
+input, select {
+  padding: 16px;
+  background-color: #EFF0F1;
+  border-radius: 4px;
+  border: none;
+}
+
+select {
+  height: 45px;
+  width: 100%;
+}
+
+input:active,
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #2D3945;
+  border-radius: 4px;
+}
+
+/* Input Placeholder Styling */
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+  color: #A8ADB2;
+  font-style: italic;
+  font-family: 'Playfair Display', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+  color: #A8ADB2;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  text-align: right;
+  color: #A8ADB2;
+  font-style: italic
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+  color: #A8ADB2;
+  font-style: italic
+}
+
+textarea {
+  background-color:  #EFF0F1;
+  border: none;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 4px;
+}
+
+.newsletter label {
+  display: inline-block;
+}
+
+button {
+  background-color: #4EBBB5;
+  border: none;
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 36px;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 100px;
+  font-style: italic
+}
+
+/* ---------------------------
+  Form Layout
+--------------------------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  padding: 12px 0;
+}
+
+input#zip_code {
+  width: 40%;
+}
+
+.newsletter .container  {
+  flex-direction: column;
+}
+
+.newsletter-section {
+  padding-bottom: 36px;
+}
+
+button {
+  display: block;
+}
+
+/* ---------------------------
+  Desktop Layout
+--------------------------- */
+
+
+@media (min-width: 768px) {
+
+  .container {
+    flex-direction: row;
+  }
+
+  .container label{
+    flex-basis: 30%;
+  }
+
+  .container input,
+  .container select{
+    flex-basis: 70%;
+  }
+}
+
